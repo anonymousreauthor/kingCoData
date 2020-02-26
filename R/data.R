@@ -1,0 +1,75 @@
+
+#' King County Sales 1999-01-01 through 2019-12-31
+#'
+#' King County residential transactions of single family and townhomes.
+#'
+#' @docType data
+#' @usage data(kingco_sales)
+#' @source King County Assessor: http://info.kingcounty.gov/assessor/DataDownload/
+#' @format A \code{"data.frame"} with 458,044 rows and 46 variables
+#' \describe{
+#'   \item{sale_id}{The unique transaction identifying code.}
+#'   \item{pinx}{The unique property identifying code (Major + Minor).  Original value is preceded by
+#'   two '..'s to prevent the dropping of leading zeros}
+#'   \item{sale_date}{Date of sale}
+#'   \item{sale_price}{Price of the home}
+#'   \item{sale_nbr}{Count of times this property sold during time period}
+#'   \item{sale_warning}{Assessor's warning code for this sale}
+#'   \item{join_status}{Type of data join, see `explain("join_status") for more details`}
+#'   \item{join_year}{Year of data joined to the sale -- based on 'join_status'}
+#'   \item{longitude}{Longitude}
+#'   \item{latitude}{Latitude }
+#'   \item{area}{Assessment area or zone}
+#'   \item{city}{City}
+#'   \item{zoning}{Local zoning code}
+#'   \item{present_use}{Property Use Code}
+#'   \item{land_val}{Land Tax Value (based on Join Year)}
+#'   \item{imp_val}{Improved Tax Value (based on Join Year)}
+#'   \item{year_built}{Year home built}
+#'   \item{year_reno}{Year major renovation}
+#'   \item{sqft_lot}{Lot size in square feet}
+#'   \item{sqft}{Square footage of house}
+#'   \item{sqft_1}{Square footage of first floor}
+#'   \item{sqft_fbsmt}{Square footage of finished basement}
+#'   \item{grade}{Building quality}
+#'   \item{fbsmt_grade}{Building quality of finished basement}
+#'   \item{condition}{Home condition}
+#'   \item{stories}{# of Stories}
+#'   \item{beds}{# of beds}
+#'   \item{bath_full}{# of Full Baths}
+#'   \item{bath_3qtr}{# of 3/4 Baths}
+#'   \item{bath_half}{# of 1/2 Baths}
+#'   \item{garb_sqft}{Basement garage square feet}
+#'   \item{gara_sqft}{Attached garage square feetn}
+#'   \item{wfnt}{Waterfront rating}
+#'   \item{golf}{On golf course}
+#'   \item{greenbelt}{On greenbelt}
+#'   \item{traffic_noies}{Traffic Noise rating}
+#'   \item{view_rainier}{View of Mt. Raininer}
+#'   \item{view_olympics}{View of Olympic Mountains}
+#'   \item{view_cascades}{View of Cascade Mountains}
+#'   \item{view_territorial}{Territorial View}
+#'   \item{view_skyline}{View of Seattle Skyline}
+#'   \item{view_sound}{View of Puget Sound}
+#'   \item{view_lakewash}{View of Lake Washington}
+#'   \item{view_lakesamm}{View of Lake Sammammish}
+#'   \item{view_otherwater}{View of Other Water}
+#'   \item{view_other}{View of Other}
+#'}
+"kingco_sales"
+
+#'
+#' Custom residential submarkets in King County WA
+#'
+#' Join to the 'area' field in `kingco_sales`
+#'
+#' @docType data
+#' @usage data(kingco_submarkets)
+#' @source Author created
+#' @format A \code{"data.frame"} with 95 rows and 2 variables
+#' \describe{
+#'   \item{area}{Assessment area or zone}
+#'   \item{submarket}{Custom submarket data}
+#' }
+"kingco_submarkets"
+
